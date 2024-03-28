@@ -1,2 +1,7 @@
-package dto.request;public class EntryRequest {
+package dto.request;
+
+import lombok.Data;
+
+@Data
+public class EntryRequest {
 }

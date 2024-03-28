@@ -1,2 +1,5 @@
-package services;public class EntryServicesImpl {
+package services;
+
+public class EntryServicesImpl implements EntryServices{
+
 }

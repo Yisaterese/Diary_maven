@@ -1,2 +1,5 @@
-package controllers;public class EntryController {
+package controllers;
+
+public class EntryController {
+
 }
