@@ -87,14 +87,8 @@ class DiaryControllerTest {
         entryRequest.setTitle("My love life");
         entryRequest.setBody("When i ever see you my heart do jigijigi panpan ");
         diaryController.createEntryFor(entryRequest);
-//        entry.setAuthor(entryRequest.getAuthor());
-//        entry.setTitle(entryRequest.getTitle());
-//        entry.setBody(entryRequest.getBody());
-//
 
-            assertEquals(1, diaryController.findAll().size());
-
-
+        assertEquals(1, diaryController.findAll().size());
 
     }
 

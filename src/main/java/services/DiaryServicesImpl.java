@@ -1,5 +1,6 @@
 package services;
 
+import data.models.Entry;
 import dto.request.EntryRequest;
 import exception.ExistingDiaryException.InvalidPasswordException.InvalidPasswordException;
 import exception.ExistingDiaryException.InvalidUserNameException.InvalidUserNameException;
@@ -12,6 +13,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import data.models.Diary;
 import data.repository.DiaryRepository;
+
+import java.util.List;
 
 @Service
 public class DiaryServicesImpl implements DiaryServices {
@@ -73,9 +76,9 @@ public class DiaryServicesImpl implements DiaryServices {
 
         return null;
     }
-//
-//    public List<Entry> findAllEntries() {
-//        return entryServiceImplement.findAll();
-//
-//    }
+
+    public List<Entry> findAllEntries() {
+        return entryServiceImplement.findAll();
+
+    }
 }

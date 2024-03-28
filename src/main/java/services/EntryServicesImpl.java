@@ -7,6 +7,8 @@ import exception.ExistingDiaryException.ExistingEntryException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class EntryServicesImpl implements EntryServices{
     @Autowired
@@ -21,6 +23,11 @@ public class EntryServicesImpl implements EntryServices{
         if(entry.getBody().equals(entryRequest.getBody()))throw new ExistingEntryException("Entry already exist");
         if(entry.getTitle().equals(entryRequest.getTitle()))throw new ExistingEntryException("entry title already exist");
         entryRepositoryImplement.save(entry);
+    }
+
+    @Override
+    public List<Entry> findAll() {
+        return entryRepositoryImplement.findAll();
     }
 
 }
