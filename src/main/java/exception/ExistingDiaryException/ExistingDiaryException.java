@@ -1,4 +1,4 @@
-package ExistingDiaryException;
+package exception.ExistingDiaryException;
 
 public class ExistingDiaryException extends  RuntimeException{
     public ExistingDiaryException(String message){

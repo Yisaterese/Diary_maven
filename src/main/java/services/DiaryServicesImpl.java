@@ -1,7 +1,8 @@
 package services;
 
-import InvalidPasswordException.InvalidPasswordException;
-import InvalidUserNameException.InvalidUserNameException;
+import dto.request.EntryRequest;
+import exception.ExistingDiaryException.InvalidPasswordException.InvalidPasswordException;
+import exception.ExistingDiaryException.InvalidUserNameException.InvalidUserNameException;
 
 import dto.request.LoginRequest;
 import dto.request.LogoutRequest;
@@ -50,11 +51,11 @@ public class DiaryServicesImpl implements DiaryServices {
         foundDiary.setLock(false);
     }
 
-//    public void createEntryFor(EntryRequest entryRequest) {
-//        entryServiceImplement.entryServicesRequestDetailsAndValidation(entryRequest);
-//
-//    }
-//
+    public void createEntry(EntryRequest entryRequest) {
+        entryServiceImplement.entryServicesRequestDetailsAndValidation(entryRequest);
+
+    }
+
     private boolean findPassword(LoginRequest loginRequest) {
         Diary foundDiary = diaryRepositoryImplement.findByUsername(loginRequest.getUsername());
         if (foundDiary.getPassword().equals(loginRequest.getPassword())) {
